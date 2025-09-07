@@ -47,14 +47,21 @@ export default function AmadaMiaPage() {
     },
     about: {
       paragraph:
-        'Luxury Amada Mía no es solo un desarrollo inmobiliario: es la expresión más pura de lo que significa vivir con propósito y distinción en Playa del Carmen. Diseñado por el arquitecto mexicano Mario Luna Zepeda y concebido como la primera joya arquitectónica de Queara, este proyecto reúne plusvalía, exclusividad y diseño contemporáneo en una ubicación privilegiada, a pasos de la Quinta Avenida.',
+        `Luxury Amada Mía no es solo un desarrollo inmobiliario:
+        es la expresión más pura de lo que significa vivir con propósito
+        y distinción en Playa del Carmen.<br/><br/>
+        Diseñado por el arquitecto mexicano Mario Luna Zepeda y
+        concebido como la primera joya arquitectónica de Queara
+        Forever, este proyecto reúne plusvalía, exclusividad y diseño
+        contemporáneo en una ubicación privilegiada, a pasos de la
+        Quinta Avenida`
     },
     catalog: [
       {
         title: 'Tipo 1',
         units: 'Planta Baja',
         description:
-          '58.69 m² | 2 recámaras | 2 baños | Sala | Comedor | Cocina | Cuarto de lavado | Closet',
+          '64.70 m² | 2 recámaras | 2 baños | Sala | Comedor | Cocina | Cuarto de lavado | Closet',
         img: depto_01,
         alt: 'Estancia moderna — Planta baja',
       },
@@ -62,7 +69,7 @@ export default function AmadaMiaPage() {
         title: 'Tipo 2',
         units: '14 Unidades (PB a 6º nivel)',
         description:
-          '64.95 m² | 2 recámaras | 2 baños | Sala | Comedor | Cocina | Cuarto de lavado | Closet',
+          '69.02 m² | 2 recámaras | 2 baños | Sala | Comedor | Cocina | Cuarto de lavado | Closet',
         img: depto_02,
         alt: 'Fachada contemporánea — Tipo 2',
       },
@@ -70,7 +77,7 @@ export default function AmadaMiaPage() {
         title: 'Tipo 3',
         units: '12 Unidades (1º a 6º nivel)',
         description:
-          '49.14 m² | 2 recámaras | 1 baño | Sala | Comedor | Cocina | Cuarto de lavado | Closet',
+          '54.72 m² | 2 recámaras | 1 baño | Sala | Comedor | Cocina | Cuarto de lavado | Closet',
         img: depto_03,
         alt: 'Recámara luminosa — Tipo 3',
       },
@@ -78,7 +85,7 @@ export default function AmadaMiaPage() {
         title: 'Tipo 4',
         units: '6 Unidades (1º a 6º nivel)',
         description:
-          '50.41 m² | 1 recámara | 1 baño | Sala | Comedor | Cocina | Cuarto de lavado | Closet',
+          '51.07 m² | 1 recámara | 1 baño | Sala | Comedor | Cocina | Cuarto de lavado | Closet',
         img: depto_04,
         alt: 'Cocina integrada — Tipo 4',
       },
@@ -86,7 +93,7 @@ export default function AmadaMiaPage() {
         title: 'Tipo 5',
         units: '5 Unidades (2º a 6º nivel)',
         description:
-          '47.69 m² | 1 recámara | 1 baño | Sala | Comedor | Cocina | Cuarto de lavado | Closet',
+          '49.45 m² | 1 recámara | 1 baño | Sala | Comedor | Cocina | Cuarto de lavado | Closet',
         img: depto_05,
         alt: 'Terraza con vista — Tipo 5',
       },
@@ -205,10 +212,8 @@ export default function AmadaMiaPage() {
         <div className="container px-6 md:py-24">
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div className="pr-20">
-              <h2 className="font-black">EL CONCEPTO</h2>
-              <p className="text-neutral-700 leading-relaxed">
-                {content.about.paragraph}
-              </p>
+              <h2 className="font-black mb-12">EL CONCEPTO</h2>
+              <p className="text-neutral-700 leading-relaxed" dangerouslySetInnerHTML={{__html: content.about.paragraph}}/>
             </div>
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow">
               <Image
@@ -303,17 +308,15 @@ export default function AmadaMiaPage() {
           <div className="items-start">
             <div className="mb-20">
               <h2 className="font-black text-center mb-20">CALIDAD Y ACABADOS</h2>
-              <p className="ft-2 text-center text-neutral-700 mt-4">Cada residencia refleja el equilibrio perfecto
-                entre
-                elegancia,
+              <p className="ft-2 text-center text-neutral-700 mt-4">Cada residencia refleja el equilibrio perfecto entre elegancia,
                 funcionalidad e innovación.</p>
             </div>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-neutral-700">
-              <li className="rounded-xl bg-white p-12 border">Cocinas integrales marca Teka</li>
+              <li className="rounded-xl bg-white p-12 border">Cocinas integrales</li>
               <li className="rounded-xl bg-white p-12 border">Pisos de porcelanato y duela premium</li>
-              <li className="rounded-xl bg-white p-12 border">Minisplits en todas las unidades</li>
+              <li className="rounded-xl bg-white p-12 border">Aires acondicionados</li>
               <li className="rounded-xl bg-white p-12 border">Closets en recámaras</li>
-              <li className="rounded-xl bg-white p-12 border">Domótica italiana Master: hogares inteligentes</li>
+              <li className="rounded-xl bg-white p-12 border">Domótica italiana Master Living Technology</li>
               <li className="rounded-xl bg-white p-12 border">Ventanería alemana de PVC anticiclónica</li>
             </ul>
           </div>
@@ -413,14 +416,16 @@ export default function AmadaMiaPage() {
               </div>
             </div>
             <p className="text-white">
-              Desarrolladora mexicana que integra diseño, funcionalidad y plusvalía en cada proyecto. Luxury Amada Mía
-              es el inicio de una serie de desarrollos que transformarán la forma de habitar el Caribe.
+              Desarrolladora mexicana que integra diseño,
+              funcionalidad y plusvalía en cada proyecto. Luxury
+              Amada Mía es el inicio de una serie de desarrollos
+              que transformarán la forma de habitar el Caribe.
             </p>
           </div>
           <div className="p-32">
             <h2 className="font-black text-white mb-12">MARIO LUNA ZEPEDA</h2>
-            <p className="mb-8 text-white">Arquitecto mexicano reconocido por su visión contemporánea y
-              estética sofisticada.</p>
+            <p className="mb-8 text-white">Arquitecto mexicano reconocido por su visión
+              contemporánea y estética sofisticada.</p>
             <p className="italic text-right w-2/3 ml-auto text-white">“La arquitectura es el arte de crear espacios que
               se convierten en legado”</p>
           </div>
