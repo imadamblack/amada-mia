@@ -7,9 +7,9 @@ export const info = {
     recipients: [""],
     subject: "Nuevo prospecto Amada Mía",
   },
-  phoneNumber: "+",
+  phoneNumber: "+529841398175",
   whatsapp: {
-    value: "+",
+    value: "+529841398175",
     message: "Buen día, me interesan los departamentos de Playa del Carmen",
   },
   social: {
@@ -23,7 +23,7 @@ export const info = {
     city: "",
     state: "",
   },
-  optInWebhook: '',
+  optInWebhook: 'https://n8n.notoriovs.com/webhook/1c58e225-58f6-4f65-8604-6cc81811584d',
   surveyWebhook: '',
   surveyRedirect: '',
   privacyNotice: "/aviso-privacidad",

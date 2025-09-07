@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
+import { info } from '../../info';
 
 import i00 from '/public/landing/00.jpg';
 import i01 from '/public/landing/01.jpg';
@@ -8,17 +9,10 @@ import depto_02 from '/public/depas/depa-2.png';
 import depto_03 from '/public/depas/depa-3.png';
 import depto_04 from '/public/depas/depa-4.png';
 import depto_05 from '/public/depas/depa-5.png';
-import bg_marmol from '/public/landing/bg-marmol.png';
 
-import calidad from '/public/SVG/calidad.svg';
-import concepto from '/public/SVG/concepto.svg';
-import contacto from '/public/SVG/contacto.svg';
-import depas from '/public/SVG/depas.svg';
 import logoWhite from '/public/SVG/logo-white.svg';
 import logoQueara from '/public/SVG/logo-queara-white.svg';
-import exclusividad from '/public/SVG/exclusividad.svg';
-import queara from '/public/SVG/queara.svg';
-import ventajas from '/public/SVG/ventajas.svg';
+import whatsapp from '/public/SVG/whatsapp.svg';
 import vivir from '/public/SVG/ico-vivir.svg';
 import invertir from '/public/SVG/ico-invertir.svg';
 import rentabilidad from '/public/SVG/ico-roi.svg';
@@ -213,7 +207,8 @@ export default function AmadaMiaPage() {
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <div className="pr-20">
               <h2 className="font-black mb-12">EL CONCEPTO</h2>
-              <p className="text-neutral-700 leading-relaxed" dangerouslySetInnerHTML={{__html: content.about.paragraph}}/>
+              <p className="text-neutral-700 leading-relaxed"
+                 dangerouslySetInnerHTML={{__html: content.about.paragraph}}/>
             </div>
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow">
               <Image
@@ -308,7 +303,8 @@ export default function AmadaMiaPage() {
           <div className="items-start">
             <div className="mb-20">
               <h2 className="font-black text-center mb-20">CALIDAD Y ACABADOS</h2>
-              <p className="ft-2 text-center text-neutral-700 mt-4">Cada residencia refleja el equilibrio perfecto entre elegancia,
+              <p className="ft-2 text-center text-neutral-700 mt-4">Cada residencia refleja el equilibrio perfecto entre
+                elegancia,
                 funcionalidad e innovación.</p>
             </div>
             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-neutral-700">
@@ -412,7 +408,8 @@ export default function AmadaMiaPage() {
           <div className="p-32">
             <div className="mb-8">
               <div className="relative h-[6rem] flex justify-start mb-20">
-                <Image src={logoQueara} layout="fill" objectFit="contain" objectPosition="left" className="brightness-200"/>
+                <Image src={logoQueara} layout="fill" objectFit="contain" objectPosition="left"
+                       className="brightness-200"/>
               </div>
             </div>
             <p className="text-white">
@@ -431,6 +428,22 @@ export default function AmadaMiaPage() {
           </div>
         </div>
       </section>
+
+      <div
+        className='sticky bottom-0 overflow-hidden mt-20 z-50 border-t border-brand-2 shadow-[0_-6px_12px_rgba(0,0,0,0.25)]'>
+        <div className='-mx-8 flex bg-brand-5'>
+          <div className='container mt-0'>
+            <a
+              href={`https://wa.me/${info.whatsapp.value}?text=${info.whatsapp.message}`}
+              target="_blank"
+              className='ft-3 button hover:bg-brand-5 !mt-0 !w-full !py-8 !px-16'
+            >
+              <span className="filter invert mr-4"><Image src={whatsapp} width={24} height={24}/></span>
+              Mándanos un WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
 
       <section id="am-contact" className="bg-neutral-100" style={{
         borderTop: '8px solid transparent',
