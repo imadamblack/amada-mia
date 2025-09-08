@@ -38,9 +38,9 @@ export default function OptInForm({lastClick = ''}) {
       .then(() => {
         fbEvent(
           'Lead',
-          {email: data.email, phone: data.phone, externalID: id},
+          {email: data.email, phone: data.phone, externalID: ''},
         );
-        setCookie('lead', {...data, id});
+        setCookie('lead', {...data});
         router.push(`/thankyou`);
       })
       // .catch(() => {
